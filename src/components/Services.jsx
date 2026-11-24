@@ -23,7 +23,7 @@ function MediaPanel({ media, caption, price, className = '' }) {
           {media.type === 'video' ? (
             <Reel src={media.src} poster={media.poster} eager className="size-full object-cover bw" />
           ) : (
-            <motion.img src={media.src} alt="" className="size-full object-cover bw" initial={{ scale: 1.12 }} animate={{ scale: 1 }} transition={{ duration: 1.4, ease: EASE }} />
+            <motion.img src={media.src} alt="" loading="lazy" decoding="async" className="size-full object-cover bw" initial={{ scale: 1.12 }} animate={{ scale: 1 }} transition={{ duration: 1.4, ease: EASE }} />
           )}
         </motion.div>
       </AnimatePresence>

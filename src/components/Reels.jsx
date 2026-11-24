@@ -18,7 +18,7 @@ const REELS = [
   { n: 1, alt: 'Cabelo penteado para trás com barba alinhada' },
   { n: 3, alt: 'Carlos finalizando com secador e pomada' },
   { n: 2, alt: 'Finalização com secador na barbearia' },
-].map((r) => ({ ...r, src: `media/v${r.n}.mp4`, poster: `media/v${r.n}-poster.jpg` }));
+].map((r) => ({ ...r, src: `media/v${r.n}.mp4`, poster: `media/v${r.n}-poster.webp` }));
 
 function Lightbox({ reel, onClose }) {
   const closeRef = useRef(null);

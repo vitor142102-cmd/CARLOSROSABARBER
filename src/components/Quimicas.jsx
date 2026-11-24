@@ -8,7 +8,7 @@ import { EASE, ext, wa } from '../lib.js';
 import { QUIMICAS, duration } from '../services.js';
 import { Arrow, Reel, Reveal, useVideos } from './fx.jsx';
 
-const media = (n) => ({ src: `media/v${n}.mp4`, poster: `media/v${n}-poster.jpg` });
+const media = (n) => ({ src: `media/v${n}.mp4`, poster: `media/v${n}-poster.webp` });
 
 /* Baralho de vídeos verticais: o de cima toca, os de trás ficam leque. Clique (ou espere) para o próximo. */
 function Deck({ style }) {
@@ -41,6 +41,8 @@ function Deck({ style }) {
             <motion.img
               src={style.image.src}
               alt={style.image.alt}
+              loading="lazy"
+              decoding="async"
               className="size-full object-cover"
               initial={{ scale: 1.12 }}
               animate={{ scale: 1 }}
@@ -93,7 +95,7 @@ function Deck({ style }) {
                 {k === 0 ? (
                   <Reel src={m.src} poster={m.poster} eager className="size-full object-cover" label={`${style.name}: vídeo de um trabalho do Carlos`} />
                 ) : (
-                  <img src={m.poster} alt="" className="size-full object-cover brightness-90" />
+                  <img src={m.poster} alt="" loading="lazy" decoding="async" className="size-full object-cover brightness-90" />
                 )}
               </motion.button>
             );

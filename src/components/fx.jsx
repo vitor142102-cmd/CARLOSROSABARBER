@@ -90,27 +90,31 @@ export function Magnetic({ children, strength = 0.28, className = '' }) {
   );
 }
 
-/* ---------- vídeo que só toca quando aparece na tela ---------- */
+/* ---------- vídeo que só baixa quando está chegando na tela e só toca quando aparece ---------- */
 export function Reel({ src, poster, className = '', label, eager = false }) {
   const ref = useRef(null);
+  // capa: baixa um pouco antes de aparecer; vídeo: só quando aparece de fato
+  const near = useInView(ref, { once: true, margin: '600px' });
   const inView = useInView(ref, { margin: '0px 0px -5% 0px' });
+  const [load, setLoad] = useState(false);
   const { paused } = useVideos();
+  useEffect(() => { if (inView) setLoad(true); }, [inView]);
   useEffect(() => {
     const v = ref.current;
-    if (!v) return;
+    if (!v || !load) return;
     if (inView && !paused) v.play().catch(() => {});
     else v.pause();
-  }, [inView, paused]);
+  }, [inView, paused, load]);
   return (
     <video
       ref={ref}
       className={className}
-      src={src}
-      poster={poster}
+      src={load ? src : undefined}
+      poster={near ? poster : undefined}
       muted
       loop
       playsInline
-      preload={eager ? 'auto' : 'metadata'}
+      preload={load ? (eager ? 'auto' : 'metadata') : 'none'}
       aria-label={label}
       disablePictureInPicture
     />

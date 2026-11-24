@@ -1,6 +1,6 @@
 // Tabela de serviços do Carlos (preços e tempos passados por ele).
 // Para mudar um preço, edite aqui. "from: true" mostra "A partir de".
-const v = (n) => ({ type: 'video', src: `media/v${n}.mp4`, poster: `media/v${n}-poster.jpg` });
+const v = (n) => ({ type: 'video', src: `media/v${n}.mp4`, poster: `media/v${n}-poster.webp` });
 const img = (src) => ({ type: 'img', src });
 
 export const CATS = [
@@ -23,7 +23,7 @@ export const SERVICES = [
 
   { cat: 'acabamento', name: 'Acabamento - Pezinho', price: 'R$ 35,00', from: true, time: 30, media: v(2) },
   // FOTO provisória (Unsplash)
-  { cat: 'acabamento', name: 'Sobrancelha', price: 'R$ 20,00', time: 15, media: img('img/stock/serv-sobrancelha.jpg') },
+  { cat: 'acabamento', name: 'Sobrancelha', price: 'R$ 20,00', time: 15, media: img('img/stock/serv-sobrancelha.webp') },
   { cat: 'acabamento', name: 'Depilação - Nariz', price: 'R$ 15,00', time: 15 },
   { cat: 'acabamento', name: 'Depilação - Orelhas', price: 'R$ 15,00', time: 15 },
 

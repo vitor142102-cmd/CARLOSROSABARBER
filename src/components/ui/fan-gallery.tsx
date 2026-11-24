@@ -58,6 +58,7 @@ function Card({
   step,
   radius,
   sectionInView,
+  sectionNear,
   paused,
 }: {
   card: FanCard
@@ -67,6 +68,7 @@ function Card({
   step: number
   radius: number
   sectionInView: boolean
+  sectionNear: boolean
   paused: boolean
 }) {
   const rotate = useTransform(pos, (p) => wrapDist(index, p, n) * step)
@@ -85,13 +87,19 @@ function Card({
     setCenter((v) => (v === a < 0.5 ? v : a < 0.5))
   })
 
+  // o vídeo só baixa quando o card chega perto do centro com a seção na tela
+  const [load, setLoad] = React.useState(false)
+  React.useEffect(() => {
+    if (near && sectionInView) setLoad(true)
+  }, [near, sectionInView])
+
   const videoRef = React.useRef<HTMLVideoElement>(null)
   React.useEffect(() => {
     const v = videoRef.current
-    if (!v) return
+    if (!v || !load) return
     if (near && sectionInView && !paused) v.play().catch(() => {})
     else v.pause()
-  }, [near, sectionInView, paused])
+  }, [near, sectionInView, paused, load])
 
   return (
     <motion.div
@@ -102,12 +110,12 @@ function Card({
       {card.video ? (
         <video
           ref={videoRef}
-          src={card.video}
-          poster={card.src}
+          src={load ? card.video : undefined}
+          poster={sectionNear ? card.src : undefined}
           muted
           loop
           playsInline
-          preload="metadata"
+          preload={load ? "metadata" : "none"}
           aria-label={card.alt ?? card.label}
           className={cn(
             "pointer-events-none h-full w-full select-none object-cover transition-[filter] duration-700",
@@ -117,6 +125,7 @@ function Card({
       ) : (
         <img
           src={card.src}
+          loading="lazy"
           alt={card.alt ?? card.label}
           draggable={false}
           className={cn(
@@ -155,6 +164,7 @@ export function FanGallery({
   const ref = React.useRef<HTMLElement>(null)
   const inView = useInView(ref, { amount: 0.4 })
   const nearView = useInView(ref, { margin: "0px 0px -10% 0px" })
+  const soon = useInView(ref, { once: true, margin: "600px 0px" })
   const reduce = useReducedMotion()
 
   // geometria a partir da largura da tela: os cinco cards visíveis sempre cabem com espaço entre eles
@@ -280,6 +290,7 @@ export function FanGallery({
             step={geo.step}
             radius={geo.radius}
             sectionInView={nearView}
+            sectionNear={soon}
             paused={paused || !!reduce}
           />
         ))}

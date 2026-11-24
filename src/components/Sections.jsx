@@ -25,8 +25,8 @@ export function Words() {
 /* ============ 6. A JORNADA (capítulos presos na tela) ============ */
 // TEXTO: revisar com o Carlos.
 const CHAPTERS = [
-  { k: '2024', t: 'Primeiros vídeos de corte no @carlosrosabarber', img: 'img/carlos-espelho.jpg', alt: 'Carlos de camiseta preta tirando foto no espelho da barbearia' },
-  { k: 'Hoje', t: 'Agenda aberta em Jaraguá do Sul/SC, com hora marcada', img: 'img/barbearia.jpg', alt: 'Carlos ajeitando o cabelo de um cliente na barbearia' },
+  { k: '2024', t: 'Primeiros vídeos de corte no @carlosrosabarber', img: 'img/carlos-espelho.webp', alt: 'Carlos de camiseta preta tirando foto no espelho da barbearia' },
+  { k: 'Hoje', t: 'Agenda aberta em Jaraguá do Sul/SC, com hora marcada', img: 'img/barbearia.webp', alt: 'Carlos ajeitando o cabelo de um cliente na barbearia' },
 ];
 
 export function Journey() {
@@ -66,6 +66,8 @@ export function Journey() {
                 key={c.img}
                 src={c.img}
                 alt={c.alt}
+                loading="lazy"
+                decoding="async"
                 className="absolute inset-0 size-full object-cover bw"
                 initial={{ clipPath: 'inset(100% 0% 0% 0%)', scale: 1.15, zIndex: 2 }}
                 animate={{ clipPath: 'inset(0% 0% 0% 0%)', scale: 1, zIndex: 2 }}
@@ -170,7 +172,7 @@ export function Location() {
       <div className="wrap grid items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-24">
         {/* FOTO: local (fachada ou interior do espaço do Carlos) */}
         <ClipReveal className="relative aspect-[4/5] max-h-[80svh] overflow-hidden bg-ink lg:aspect-auto lg:h-[76svh]">
-          <motion.img style={{ y }} src="img/barbearia-2.jpg" alt="Carlos finalizando com secador o cabelo de um cliente na barbearia" loading="lazy" className="absolute inset-x-0 -top-[8%] h-[116%] w-full object-cover object-[50%_30%] bw" />
+          <motion.img style={{ y }} src="img/barbearia-2.webp" alt="Carlos finalizando com secador o cabelo de um cliente na barbearia" loading="lazy" decoding="async" className="absolute inset-x-0 -top-[8%] h-[116%] w-full object-cover object-[50%_30%] bw" />
         </ClipReveal>
         <div>
           <Reveal as="p" className="label text-gold" y={12}>Onde estou</Reveal>
@@ -243,7 +245,7 @@ export function FinalCta() {
   return (
     <section ref={ref} aria-labelledby="final-title" className="relative isolate grid min-h-[100svh] place-items-center overflow-hidden text-center">
       {/* FOTO: cta-final (foto do Carlos) */}
-      <motion.img style={{ scale }} src="img/carlos-expo.jpg" alt="" className="absolute inset-0 -z-20 size-full object-cover object-[50%_22%] bw" />
+      <motion.img style={{ scale }} src="img/carlos-expo.webp" alt="" loading="lazy" decoding="async" className="absolute inset-0 -z-20 size-full object-cover object-[50%_22%] bw" />
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,rgba(11,11,11,.6)_0%,rgba(11,11,11,.92)_72%),linear-gradient(180deg,#0b0b0b_0%,rgba(11,11,11,0)_18%,rgba(11,11,11,0)_82%,#0b0b0b_100%)]" />
       <div className="wrap py-28">
         <Reveal as="p" className="label text-gold" y={12}>Agenda aberta · Jaraguá do Sul/SC</Reveal>

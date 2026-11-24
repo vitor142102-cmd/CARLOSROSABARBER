@@ -57,10 +57,12 @@ export default function Hero() {
       {/* FOTO: hero (inteira, sem recorte). Celular: tela toda. Desktop: metade direita. */}
       <div className="absolute inset-0 -z-20 overflow-hidden lg:left-auto lg:w-[54%]">
         <motion.img
-          src="img/carlos-rua.jpg"
+          src="img/carlos-rua.webp"
           alt="Carlos Gabriel na rua, de camiseta branca estampada e calça jeans, com as mãos no bolso"
           width="1125"
           height="1500"
+          fetchPriority="high"
+          decoding="async"
           style={{ y: photoY }}
           className="size-full object-cover object-[56%_40%] bw brightness-[.82] lg:object-[50%_100%]"
           initial={{ scale: 1.18, opacity: 0 }}

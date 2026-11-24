@@ -2,8 +2,8 @@
 import { FanGallery } from '@/components/ui/fan-gallery';
 import { Reveal, RevealText, useVideos } from './fx.jsx';
 
-// VÍDEOS: public/media/v*.mp4 com a capa v*-poster.jpg. Para trocar, mude aqui.
-const v = (n, label, tags, alt) => ({ src: `media/v${n}-poster.jpg`, video: `media/v${n}.mp4`, label, tags, alt });
+// VÍDEOS: public/media/v*.mp4 com a capa v*-poster.webp. Para trocar, mude aqui.
+const v = (n, label, tags, alt) => ({ src: `media/v${n}-poster.webp`, video: `media/v${n}.mp4`, label, tags, alt });
 const CUTS = [
   v(15, 'Degradê médio', ['Mid fade', 'Franja'], 'Degradê médio com franja texturizada'),
   v(10, 'Textura no topo', ['Tesoura', 'Textura'], 'Corte com textura no topo em cabelo loiro'),
