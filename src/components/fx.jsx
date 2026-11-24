@@ -4,7 +4,7 @@ import {
   motion, useAnimationFrame, useInView, useMotionValue, useReducedMotion,
   useScroll, useSpring, useTransform, useVelocity,
 } from 'motion/react';
-import { EASE } from '../lib.js';
+import { EASE, vsrc } from '../lib.js';
 
 /* ---------- estado global dos vídeos (botão "pausar vídeos") ---------- */
 export const VideoCtx = createContext({ paused: false, toggle: () => {} });
@@ -109,7 +109,7 @@ export function Reel({ src, poster, className = '', label, eager = false }) {
     <video
       ref={ref}
       className={className}
-      src={load ? src : undefined}
+      src={load ? vsrc(src) : undefined}
       poster={near ? poster : undefined}
       muted
       loop

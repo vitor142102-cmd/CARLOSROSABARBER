@@ -138,6 +138,9 @@ img, video { display: block; max-width: 100%; }
   z-index: 90;
   pointer-events: none;
   opacity: 0.08;
+  background: url('/img/grain.webp') repeat;
+  background-size: 160px 160px;
+  will-change: transform;
   animation: grain 0.9s steps(4) infinite;
 }
 @keyframes grain {

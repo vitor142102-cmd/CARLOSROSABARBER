@@ -4,13 +4,13 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'motion/react';
 import { Scissors } from 'lucide-react';
-import { EASE, ext, wa } from '../lib.js';
+import { EASE, INTRO_MS, ext, wa } from '../lib.js';
 import { Magnetic } from './fx.jsx';
 
 // Título. Alternativas no mesmo tom:
 //   ['Degradê limpo.', 'Nome na rua.']   ·   ['Senta, confia.', 'Sai na régua.']
 const LINES = ['Corte na régua.', 'Estilo na rua.'];
-const D = 1.0; // começa depois da abertura
+const D = Math.max(0.15, INTRO_MS / 1000 - 0.15); // começa junto com a saída da abertura
 
 const up = (delay, y = 16) => ({
   initial: { opacity: 0, y },

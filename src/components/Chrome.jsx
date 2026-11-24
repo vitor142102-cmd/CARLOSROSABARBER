@@ -1,7 +1,7 @@
 // Intro, barra de anúncio, header, menu mobile, botão flutuante e grão.
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion, useMotionValueEvent, useReducedMotion, useScroll } from 'motion/react';
-import { EASE, ext, wa } from '../lib.js';
+import { EASE, INTRO_MS, ext, markIntroSeen, wa } from '../lib.js';
 import { lockScroll } from '../smooth.js';
 import { Arrow, Magnetic, RollText, WaIcon } from './fx.jsx';
 
@@ -16,11 +16,12 @@ const AGENDAR = wa('Olá Carlos, quero agendar um horário');
 /* Abertura: monograma C.R e cortina subindo. */
 export function Intro() {
   const reduce = useReducedMotion();
-  const [done, setDone] = useState(false);
+  const [done, setDone] = useState(INTRO_MS === 0);
   useEffect(() => {
-    if (reduce) { setDone(true); return; }
+    markIntroSeen();
+    if (reduce || INTRO_MS === 0) { setDone(true); return; }
     lockScroll(true);
-    const t = setTimeout(() => { setDone(true); lockScroll(false); }, 1150);
+    const t = setTimeout(() => { setDone(true); lockScroll(false); }, INTRO_MS);
     return () => { clearTimeout(t); lockScroll(false); };
   }, [reduce]);
   return (
@@ -222,14 +223,7 @@ export function Fab() {
   );
 }
 
+// Granulado de filme: uma textura pequena repetida (bem mais leve que um filtro SVG na tela toda).
 export function Grain() {
-  return (
-    <svg className="grain" width="200%" height="200%" aria-hidden="true" focusable="false">
-      <filter id="grao">
-        <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch" />
-        <feColorMatrix type="saturate" values="0" />
-      </filter>
-      <rect width="100%" height="100%" filter="url(#grao)" />
-    </svg>
-  );
+  return <div className="grain" aria-hidden="true" />;
 }

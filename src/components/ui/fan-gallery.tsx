@@ -18,6 +18,7 @@ import {
 } from "motion/react"
 import { ArrowLeft, ArrowRight } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { vsrc } from "@/lib.js"
 
 export interface FanCard {
   /** imagem (ou capa do vídeo) */
@@ -110,7 +111,7 @@ function Card({
       {card.video ? (
         <video
           ref={videoRef}
-          src={load ? card.video : undefined}
+          src={load ? vsrc(card.video) : undefined}
           poster={sectionNear ? card.src : undefined}
           muted
           loop
