@@ -1,0 +1,671 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Carlos Gabriel · Barbeiro em Jaraguá do Sul/SC</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Carlos Gabriel (@carlosrosabarber), barbeiro em Jaraguá do Sul/SC. Degradê, barba, sobrancelha e químicas com hora marcada. Agende pelo WhatsApp.">
+<meta name="theme-color" content="#0B0B0B">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Carlos Gabriel · Barbeiro em Jaraguá do Sul/SC">
+<meta property="og:description" content="Degradê, barba, sobrancelha e químicas com hora marcada. Agende pelo WhatsApp.">
+<!-- OG IMAGE: quando o site tiver domínio, aponte og:image para a foto do hero (URL absoluta) -->
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;800;900&amp;family=DM+Mono:wght@500&amp;family=Pirata+One&amp;display=swap">
+<style>
+body{margin:0;background:#0B0B0B}
+a{color:#F2F2F0}a:hover{color:#F2F2F0}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion: no-preference){html{scroll-behavior:smooth}}
+
+.site{--bg:#0B0B0B;--ink:#F2F2F0;--mute:#B5B5B0;--dim:#8E8E89;--line:#262624;--surface:#121211;--hdr:68px;
+  background:var(--bg);color:var(--ink);font-family:'Archivo',system-ui,sans-serif;font-size:17px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;overflow-x:clip;min-height:100vh}
+.site img{display:block;max-width:100%}
+.wrap{width:100%;max-width:1440px;margin:0 auto;padding-inline:clamp(16px,4vw,56px)}
+.mono{font-family:'DM Mono',ui-monospace,monospace;font-weight:500;text-transform:uppercase;letter-spacing:.2em;font-size:12px;line-height:1.5}
+.eyebrow{color:var(--gold);margin:0}
+.ttl{font-weight:900;text-transform:uppercase;letter-spacing:-.04em;line-height:.9;margin:0}
+.h2{font-size:clamp(2.6rem,6.6vw,6rem)}
+.lead{color:var(--mute);font-size:clamp(17px,1.3vw,18px);margin:0;max-width:40ch}
+.ph{color:var(--gold);border-bottom:1px dashed var(--gold);padding-bottom:1px}
+.bw{filter:grayscale(1) contrast(1.12)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.skip{position:absolute;left:16px;top:-120px;z-index:100;background:var(--ink);color:#0B0B0B;padding:14px 18px;text-decoration:none}
+.skip:focus{top:8px;color:#0B0B0B}
+
+/* botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:52px;padding:0 28px;
+  font-family:'DM Mono',ui-monospace,monospace;font-weight:500;text-transform:uppercase;letter-spacing:.2em;font-size:12px;
+  border:1px solid var(--ink);background:var(--ink);color:#0B0B0B;text-decoration:none;cursor:pointer;
+  transition:background .2s ease,color .2s ease,border-color .2s ease,transform .15s ease;white-space:nowrap}
+.btn:hover{background:transparent;color:var(--ink)}
+.btn:active{transform:translateY(1px)}
+.btn .arr{transition:transform .2s ease}
+.btn:hover .arr{transform:translateX(4px)}
+.btn--line{background:transparent;color:var(--ink);border-color:rgba(242,242,240,.45)}
+.btn--line:hover{background:var(--ink);color:#0B0B0B;border-color:var(--ink)}
+.btn--sm{min-height:44px;padding:0 18px}
+.btn--xl{min-height:76px;padding:0 48px;font-size:14px}
+.btn svg{width:18px;height:18px;flex:none}
+
+/* barra de anúncio */
+.bar{display:block;background:var(--ink);color:#0B0B0B;text-decoration:none;text-align:center;padding:11px 16px;font-size:11px}
+.bar:hover{color:#0B0B0B}
+.bar u{text-decoration:none;border-bottom:1px solid #0B0B0B;padding-bottom:1px}
+.bar:hover u{border-bottom-width:2px}
+
+/* header */
+.hdr{position:sticky;top:0;z-index:50;background:rgba(11,11,11,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.hdr-in{height:var(--hdr);display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{font-family:'Pirata One','UnifrakturCook',serif;font-size:36px;line-height:1;color:var(--ink);text-decoration:none;letter-spacing:.01em;display:inline-flex;align-items:center;min-height:44px}
+.logo:hover{color:var(--gold)}
+.nav{display:flex;gap:clamp(20px,3vw,44px)}
+.nav a{color:var(--mute);text-decoration:none;position:relative;padding:12px 0;transition:color .2s}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:6px;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
+.nav a:hover{color:var(--ink)}
+.nav a:hover::after{transform:scaleX(1)}
+.hdr-right{display:flex;align-items:center;gap:10px}
+.burger{display:none;width:44px;height:44px;border:1px solid var(--line);background:transparent;cursor:pointer;position:relative;padding:0}
+.burger span{position:absolute;left:12px;right:12px;height:1.5px;background:var(--ink);transition:transform .25s ease,opacity .2s}
+.burger span:nth-child(1){top:15px}.burger span:nth-child(2){top:21px}.burger span:nth-child(3){top:27px}
+.burger.is-open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.burger.is-open span:nth-child(2){opacity:0}
+.burger.is-open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+.mnav{position:absolute;top:100%;left:0;right:0;height:calc(100svh - var(--hdr));background:var(--bg);border-top:1px solid var(--line);
+  display:flex;flex-direction:column;justify-content:space-between;padding:28px clamp(16px,4vw,56px) 32px;overflow:auto;animation:fadeIn .25s ease both}
+.mnav[hidden]{display:none}
+.mnav-links{display:flex;flex-direction:column}
+.mnav-links a{font-weight:900;text-transform:uppercase;letter-spacing:-.04em;font-size:clamp(2.4rem,11vw,4rem);line-height:1;text-decoration:none;color:var(--ink);padding:14px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:baseline}
+.mnav-links a .mono{color:var(--gold)}
+
+/* hero */
+.hero{position:relative;isolation:isolate;overflow:hidden;min-height:max(640px,calc(100svh - var(--hdr) - 40px));display:flex;flex-direction:column;justify-content:flex-end}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 28%;z-index:-2;animation:heroZoom 2.6s cubic-bezier(.2,.7,.1,1) both}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(180deg,rgba(11,11,11,.45) 0%,rgba(11,11,11,.05) 30%,rgba(11,11,11,.6) 62%,#0B0B0B 100%),linear-gradient(90deg,rgba(11,11,11,.75) 0%,rgba(11,11,11,0) 62%)}
+.hero-body{padding-top:88px;padding-bottom:0}
+.hero-title{font-size:clamp(2.6rem,min(10.4vw,14.5vh),9rem);line-height:.86;margin:20px 0 24px}
+.ln{display:block;overflow:hidden;padding:.14em 0 .05em;margin:-.14em 0 -.05em}
+.ln-i{display:block;animation:lineUp 1s cubic-bezier(.2,.75,.1,1) both}
+.hero-sub{max-width:36ch;color:#D2D2CD;font-size:clamp(17px,1.4vw,19px);margin:0}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.in-1{animation:fadeUp .8s .1s both}
+.in-2{animation:fadeUp .8s .55s both}
+.in-3{animation:fadeUp .8s .7s both}
+.in-4{animation:fadeUp .8s .9s both}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid rgba(242,242,240,.18);margin-top:clamp(32px,5vh,56px)}
+.stat{padding:18px 0 24px}
+.stat+.stat{padding-left:clamp(14px,2.4vw,32px);border-left:1px solid rgba(242,242,240,.18)}
+.stat-n{font-weight:900;font-size:clamp(2rem,4vw,3.4rem);letter-spacing:-.04em;line-height:1;margin:0 0 10px}
+.stat-l{color:var(--dim);margin:0}
+
+/* faixa de 6 fotos */
+.strip{padding-top:clamp(64px,8vw,120px)}
+.strip-head{display:flex;justify-content:space-between;gap:16px;margin-bottom:18px;flex-wrap:wrap}
+.strip-head p{margin:0}
+.strip-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:4px}
+.frame{overflow:hidden;background:var(--surface);position:relative}
+.frame img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.1,1)}
+.frame:hover img{transform:scale(1.03)}
+.sq{aspect-ratio:1/1}
+
+/* seções */
+.sec{padding-block:clamp(96px,11vw,168px);scroll-margin-top:var(--hdr)}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:28px 48px;flex-wrap:wrap;margin-bottom:clamp(40px,5vw,72px)}
+.sec-head .eyebrow{margin-bottom:18px}
+
+/* serviços */
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(14px,1.8vw,24px)}
+.card{background:var(--surface);border:1px solid var(--line);display:flex;flex-direction:column;transition:transform .3s ease,border-color .3s ease;scroll-margin-top:calc(var(--hdr) + 16px)}
+.card:hover{transform:translateY(-2px);border-color:#3b3b38}
+.card .frame{aspect-ratio:16/9}
+.card-body{padding:clamp(22px,2.6vw,38px);display:flex;flex-direction:column;gap:14px;flex:1}
+.card-top{display:flex;justify-content:space-between;gap:12px;color:var(--dim);margin:0}
+.card h3{font-size:clamp(2rem,3.4vw,3.3rem)}
+.card p.txt{color:var(--mute);margin:0;max-width:44ch}
+.card-foot{margin-top:auto;padding-top:20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:16px}
+.price{color:var(--gold);font-size:13px;margin:0}
+.card--cta{background:var(--ink);color:#0B0B0B;border-color:var(--ink);justify-content:space-between}
+.card--cta:hover{border-color:var(--ink)}
+.card--cta .card-top{color:#4A4A46}
+.card--cta p.txt{color:#3A3A37}
+.card--cta .btn{background:#0B0B0B;color:var(--ink);border-color:#0B0B0B;align-self:flex-start}
+.card--cta .btn:hover{background:transparent;color:#0B0B0B}
+
+/* jornada */
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,6vw,112px);align-items:center}
+.jornada-txt .h2{margin:18px 0 32px}
+.jornada-txt p.txt{color:var(--mute);margin:0 0 18px;max-width:46ch}
+.steps{list-style:none;margin:36px 0 0;padding:0;border-top:1px solid var(--line)}
+.steps li{display:grid;grid-template-columns:120px minmax(0,1fr);gap:16px;padding:16px 0;border-bottom:1px solid var(--line);color:var(--mute);font-size:16px}
+.steps .mono{color:var(--gold);padding-top:3px}
+.jornada-img{aspect-ratio:4/5}
+.quote{margin:clamp(96px,11vw,168px) 0 0;padding-top:clamp(40px,5vw,64px);border-top:1px solid var(--line)}
+.quote blockquote{margin:0}
+.quote .ttl{font-size:clamp(2.4rem,8.2vw,7.6rem);line-height:.92}
+.quote .ttl em{font-style:normal;color:var(--gold)}
+.quote figcaption{margin-top:28px;color:var(--dim)}
+
+/* horários */
+.slots{border-top:1px solid var(--line)}
+.slot{display:grid;grid-template-columns:minmax(120px,220px) minmax(0,1fr) auto;align-items:center;gap:24px;padding:22px 0;border-bottom:1px solid var(--line);transition:background .25s}
+.slot:hover{background:linear-gradient(90deg,rgba(176,141,87,.06),transparent 70%)}
+.slot-day{font-weight:900;text-transform:uppercase;letter-spacing:-.04em;font-size:clamp(2rem,3.6vw,3.2rem);line-height:1;margin:0}
+.slot-day small{display:block;font-family:'DM Mono',monospace;font-weight:500;font-size:11px;letter-spacing:.2em;color:var(--dim);margin-top:8px}
+.slot-time{margin:0;color:var(--mute)}
+.slots-note{margin:22px 0 0;color:var(--dim)}
+
+/* local */
+.local{position:relative;isolation:isolate;min-height:min(92svh,880px);display:flex;align-items:center;padding-block:clamp(64px,8vw,120px);scroll-margin-top:var(--hdr)}
+.local-img{position:absolute;inset:0;z-index:-2}
+.local-img img{width:100%;height:100%;object-fit:cover}
+.local::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(11,11,11,.2) 0%,rgba(11,11,11,.55) 50%,rgba(11,11,11,.85) 100%)}
+.local-card{margin-left:auto;max-width:540px;background:rgba(11,11,11,.94);border:1px solid var(--line);padding:clamp(28px,4vw,56px)}
+.local-card .h2{font-size:clamp(2.4rem,4.6vw,4.4rem);margin:18px 0 32px}
+.info{margin:0 0 36px;border-top:1px solid var(--line)}
+.info div{display:grid;grid-template-columns:120px minmax(0,1fr);gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+.info dt{color:var(--dim)}
+.info dd{margin:0;color:var(--ink)}
+
+/* mural */
+.mural{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:clamp(130px,13.5vw,210px);grid-auto-flow:dense;gap:4px}
+.t-big{grid-column:span 2;grid-row:span 2}
+.t-tall{grid-row:span 2}
+.t-wide{grid-column:span 2}
+.mural-foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;margin-top:32px}
+.mural-foot p{margin:0;color:var(--dim)}
+
+/* depoimentos */
+.quotes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,1.8vw,24px)}
+.tcard{border:1px dashed rgba(176,141,87,.55);padding:clamp(24px,2.6vw,36px);display:flex;flex-direction:column;gap:18px;min-height:300px;margin:0}
+.tcard .mark{font-weight:900;font-size:72px;line-height:.6;color:var(--gold);margin:0;height:34px}
+.tcard blockquote{margin:0;color:var(--mute);font-size:18px}
+.tcard figcaption{margin-top:auto;padding-top:18px;border-top:1px solid var(--line)}
+
+/* CTA final */
+.final{position:relative;isolation:isolate;min-height:100svh;display:flex;align-items:center;text-align:center}
+.final-img{position:absolute;inset:0;z-index:-2}
+.final-img img{width:100%;height:100%;object-fit:cover}
+.final::after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at center,rgba(11,11,11,.55) 0%,rgba(11,11,11,.88) 70%),linear-gradient(180deg,#0B0B0B 0%,rgba(11,11,11,0) 18%,rgba(11,11,11,0) 82%,#0B0B0B 100%)}
+.final .ttl{font-size:clamp(3.6rem,15vw,14rem);line-height:.86;margin:22px 0 28px}
+.final p.txt{color:#D2D2CD;max-width:40ch;margin:0 auto 40px;font-size:clamp(17px,1.4vw,19px)}
+
+/* rodapé */
+.ftr{border-top:1px solid var(--line);padding-block:clamp(64px,7vw,104px) 36px}
+.ftr-grid{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:40px;align-items:start}
+.ftr .logo{font-size:clamp(64px,8vw,112px)}
+.ftr h3{margin:0 0 14px;color:var(--dim)}
+.ftr-link{color:var(--ink);text-decoration:none;font-size:18px;display:inline-flex;min-height:44px;align-items:center;background:linear-gradient(var(--gold),var(--gold)) 0 100%/0 1px no-repeat;transition:background-size .3s ease}
+.ftr-link:hover{background-size:100% 1px;color:var(--ink)}
+.ftr p.city{margin:0;font-size:18px;min-height:44px;display:flex;align-items:center}
+.ftr-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:72px;padding-top:24px;border-top:1px solid var(--line);color:var(--dim)}
+.ftr-bottom p{margin:0}
+
+/* whatsapp flutuante */
+.fab{position:fixed;right:16px;bottom:16px;z-index:60;width:58px;height:58px;display:none;align-items:center;justify-content:center;background:var(--ink);color:#0B0B0B;border:1px solid var(--ink);box-shadow:0 10px 30px rgba(0,0,0,.5);transition:transform .15s ease,background .2s}
+.fab:hover{color:#0B0B0B;background:#fff}
+.fab:active{transform:scale(.96)}
+.fab svg{width:26px;height:26px}
+
+/* grão */
+.grain{position:fixed;inset:0;z-index:80;pointer-events:none;opacity:.07;width:100%;height:100%}
+
+/* movimento */
+@keyframes lineUp{from{transform:translateY(108%)}to{transform:none}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes heroZoom{from{transform:scale(1.07)}to{transform:scale(1)}}
+@keyframes rvIn{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:none}}
+@supports (animation-timeline: view()){
+  @media (prefers-reduced-motion: no-preference){
+    .rv{animation:rvIn linear both;animation-timeline:view();animation-range:entry 0% cover 22%}
+  }
+}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none !important;transition:none !important}
+}
+
+/* responsivo */
+@media (max-width: 1100px){
+  .ftr-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .ftr-brand{grid-column:1/-1}
+}
+@media (max-width: 960px){
+  .nav{display:none}
+  .burger{display:inline-block}
+  .split{grid-template-columns:minmax(0,1fr)}
+  .jornada-img{aspect-ratio:4/3;order:-1}
+  .quotes{grid-template-columns:minmax(0,1fr)}
+  .tcard{min-height:0}
+  .strip-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .local{display:block;min-height:0;padding:0}
+  .local-img{position:relative;inset:auto;aspect-ratio:4/3}
+  .local::after{display:none}
+  .local-card{max-width:none;margin:0;border:0;border-bottom:1px solid var(--line);background:var(--bg);padding-inline:0}
+}
+@media (max-width: 760px){
+  .cards{grid-template-columns:minmax(0,1fr)}
+  .mural{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:42vw}
+  .slot{grid-template-columns:minmax(0,1fr) auto;gap:6px 16px}
+  .slot-day{grid-column:1}
+  .slot-time{grid-column:1;grid-row:2}
+  .slot .btn{grid-column:2;grid-row:1/3}
+  .fab{display:flex}
+  .hero-body{padding-bottom:84px}
+  .hero-title{line-height:.94}
+  .mural .frame:nth-child(n+9){display:none}
+  .ftr{padding-bottom:110px}
+  .ftr-grid{grid-template-columns:minmax(0,1fr)}
+  .hdr-cta{display:none}
+}
+@media (max-width: 600px){
+  .hero-ctas .btn,.final .btn,.local-card .btn,.mural-foot .btn{width:100%}
+  .card-foot{flex-wrap:wrap}
+  .card-foot .btn{width:100%}
+  .bar .opt{display:none}
+  .stat-l{font-size:10px;letter-spacing:.14em}
+  .info div,.steps li{grid-template-columns:minmax(0,1fr);gap:4px}
+  .btn--xl{min-height:64px;padding:0 24px;font-size:13px}
+  .hero-body{padding-top:40px}
+}
+</style>
+</head>
+<body>
+<div class="site" style="--gold: #B08D57">
+
+  <a class="skip mono" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- 1. BARRA DE ANÚNCIO -->
+  <a class="bar mono" href="https://wa.me/5547997381078?text=Ol%C3%A1%20Carlos%2C%20quero%20agendar%20um%20hor%C3%A1rio" target="_blank" rel="noopener">AGENDA ABERTA · JARAGUÁ DO SUL/SC<span class="opt"> · HORÁRIOS LIMITADOS NA SEMANA</span> → <u>AGENDAR</u></a>
+
+  <!-- 2. HEADER FIXO -->
+  <header class="hdr">
+    <div class="wrap hdr-in">
+      <a class="logo" href="#topo" aria-label="Carlos Gabriel Barber, início">C.R</a>
+      <nav class="nav" aria-label="Principal">
+        <a class="mono" href="#servicos">Cortes</a>
+        <a class="mono" href="#quimicas">Químicas</a>
+        <a class="mono" href="#jornada">A Jornada</a>
+        <a class="mono" href="#local">Local</a>
+      </nav>
+      <div class="hdr-right">
+        <a class="btn btn--sm hdr-cta" href="https://wa.me/5547997381078?text=Ol%C3%A1%20Carlos%2C%20quero%20agendar%20um%20hor%C3%A1rio" target="_blank" rel="noopener">Agendar</a>
+        <button class="burger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-mobile"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    
+      <nav class="mnav" id="menu-mobile" hidden aria-label="Menu">
+        <div class="mnav-links">
+          <a href="#servicos">Cortes <span class="mono">01</span></a>
+          <a href="#quimicas">Químicas <span class="mono">02</span></a>
+          <a href="#jornada">A Jornada <span class="mono">03</span></a>
+          <a href="#local">Local <span class="mono">04</span></a>
+        </div>
+        <a class="btn" href="https://wa.me/5547997381078?text=Ol%C3%A1%20Carlos%2C%20quero%20agendar%20um%20hor%C3%A1rio" target="_blank" rel="noopener" style="width:100%;margin-top:32px">Agendar no WhatsApp <span class="arr" aria-hidden="true">→</span></a>
+      </nav>
+    
+  </header>
+
+  <main id="conteudo">
+
+    <!-- 3. HERO -->
+    <section class="hero" id="topo" aria-labelledby="hero-title">
+      <!-- FOTO: hero (corte em andamento, horizontal, mín. 2000px de largura) -->
+      <img class="hero-img bw" src="fotos/hero.jpg" alt="Máquina acertando o degradê na lateral da cabeça de um cliente">
+      <div class="wrap hero-body">
+        <p class="mono eyebrow in-1">Carlos Gabriel · Barbeiro · Jaraguá do Sul/SC</p>
+        <h1 class="ttl hero-title" id="hero-title">
+          <span class="ln"><span class="ln-i" style="animation-delay: .20s">Corte na régua.</span></span><span class="ln"><span class="ln-i" style="animation-delay: .34s">Estilo na rua.</span></span>
+        </h1>
+        <p class="hero-sub in-2">Degradê do zero ao topo, acabamento na navalha e atendimento com hora marcada. Você chega, senta e sai pronto.</p>
+        <div class="hero-ctas in-3">
+          <a class="btn" href="https://wa.me/5547997381078?text=Ol%C3%A1%20Carlos%2C%20quero%20agendar%20um%20corte" target="_blank" rel="noopener">Agendar no WhatsApp <span class="arr" aria-hidden="true">→</span></a>
+          <a class="btn btn--line" href="#trabalhos">Ver trabalhos</a>
+        </div>
+        <!-- NÚMEROS: todos [PLACEHOLDER], confirmar com o Carlos antes de publicar -->
+        <div class="stats in-4">
+          <div class="stat"><p class="stat-n"><span class="ph">[X]</span></p><p class="mono stat-l">Anos na cadeira</p></div>
+          <div class="stat"><p class="stat-n"><span class="ph">[X]</span></p><p class="mono stat-l">Cortes por mês</p></div>
+          <div class="stat"><p class="stat-n"><span class="ph">[X]</span></p><p class="mono stat-l">Seguidores no Insta</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. FAIXA DE 6 FOTOS -->
+    <section class="strip" aria-label="Cortes recentes">
+      <div class="wrap">
+        <div class="strip-head mono">
+          <p class="eyebrow">Corte por Carlos Gabriel</p>
+          <p style="color:var(--dim)">@carlosrosabarber</p>
+        </div>
+        <div class="strip-grid">
+          <!-- FOTO: faixa-1 (quadrada) --><div class="frame sq rv"><img class="bw" src="fotos/strip-1.jpg" alt="Risco desenhado na lateral de um degradê baixo" loading="lazy"></div>
+          <!-- FOTO: faixa-2 (quadrada) --><div class="frame sq rv"><img class="bw" src="fotos/strip-2.jpg" alt="Máquina passando na nuca durante o corte" loading="lazy"></div>
+          <!-- FOTO: faixa-3 (quadrada) --><div class="frame sq rv"><img class="bw" src="fotos/strip-3.jpg" alt="Perfil de cliente com degradê alto e topo texturizado" loading="lazy"></div>
+          <!-- FOTO: faixa-4 (quadrada) --><div class="frame sq rv"><img class="bw" src="fotos/strip-4.jpg" alt="Acabamento com máquina acima da orelha" loading="lazy"></div>
+          <!-- FOTO: faixa-5 (quadrada) --><div class="frame sq rv"><img class="bw" src="fotos/strip-5.jpg" alt="Degradê sendo esfumado com a máquina" loading="lazy"></div>
+          <!-- FOTO: faixa-6 (quadrada) --><div class="frame sq rv"><img class="bw" src="fotos/strip-6.jpg" alt="Contorno da barba feito com máquina de acabamento" loading="lazy"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. SERVIÇOS -->
+    <section class="sec" id="servicos" aria-labelledby="servicos-title">
+      <div class="wrap">
+        <div class="sec-head">
+          <div>
+            <p class="mono eyebrow">Serviços</p>
+            <h2 class="ttl h2" id="servicos-title">O que eu faço</h2>
+          </div>
+          <p class="lead">Escolhe o serviço e manda mensagem. O horário a gente acerta no WhatsApp.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <!-- FOTO: servico-corte (4:3 ou 16:10) -->
+            <div class="frame"><img class="bw" src="fotos/serv-corte.jpg" alt="Barbeiro acertando o topo do cabelo com pente e máquina" loading="lazy"></div>
+            <div class="card-body">
+              <p class="mono card-top"><span>01</span><span>Degradê · social · tesoura</span></p>
+              <h3 class="ttl">Corte</h3>
+              <p class="txt">Degradê, social ou na tesoura. Acabamento na navalha e pescoço limpo.</p>
+              <div class="card-foot">
+                <!-- PREÇO: preencher --><p class="mono price"><span class="ph">[R$ —]</span></p>
+                <a class="btn btn--line btn--sm" href="https://wa.me/5547997381078?text=Ol%C3%A1%20Carlos%2C%20quero%20agendar%20um%20corte" target="_blank" rel="noopener">Agendar <span class="arr" aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <!-- FOTO: servico-barba -->
+            <div class="frame"><img class="bw" src="fotos/serv-barba.jpg" alt="Barba sendo aparada com tesoura e pente" loading="lazy"></div>
+            <div class="card-body">
+              <p class="mono card-top"><span>02</span><span>Desenho · contorno</span></p>
+              <h3 class="ttl">Barba</h3>
+              <p class="txt">Barba no desenho do seu rosto, contorno na navalha e volume no lugar.</p>
+              <div class="card-foot">
+                <!-- PREÇO: preencher --><p class="mono price"><span class="ph">[R$ —]</span></p>
+                <a class="btn btn--line btn--sm" href="https://wa.me/5547997381078?text=Ol%C3%A1%20Carlos%2C%20quero%20agendar%20uma%20barba" target="_blank" rel="noopener">Agendar <span class="arr" aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <!-- FOTO: servico-corte-barba -->
+            <div class="frame"><img class="bw" src="fotos/serv-combo.jpg" alt="Cliente de barba na cadeira durante o corte" loading="lazy"></div>
+            <div class="card-body">
+              <p class="mono card-top"><span>03</span><span>Combo</span></p>
+              <h3 class="ttl">Corte + Barba</h3>
+              <p class="txt">Os dois numa sentada só. Cabelo e barba conversando entre si.</p>
+              <div class="card-foot">
+                <!-- PREÇO: preencher --><p class="mono price"><span class="ph">[R$ —]</span></p>
+                <a class="btn btn--line btn--sm" href="https://wa.me/5547997381078?text=Ol%C3%A1%20Carlos%2C%20quero%20agendar%20um%20corte%20%2B%20barba" target="_blank" rel="noopener">Agendar <span class="arr" aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <!-- FOTO: servico-sobrancelha -->
+            <div class="frame"><img class="bw" src="fotos/serv-sobrancelha.jpg" alt="Retrato de rosto masculino com sobrancelhas alinhadas" loading="lazy"></div>
+            <div class="card-body">
+              <p class="mono card-top"><span>04</span><span>Navalha</span></p>
+              <h3 class="ttl">Sobrancelha</h3>
+              <p class="txt">Limpeza na navalha, sem exagero. Só sai o que está sobrando.</p>
+              <div class="card-foot">
+                <!-- PREÇO: preencher --><p class="mono price"><span class="ph">[R$ —]</span></p>
+                <a class="btn btn--line btn--sm" href="https://wa.me/5547997381078?text=Ol%C3%A1%20Carlos%2C%20quero%20agendar%20a%20sobrancelha" target="_blank" rel="noopener">Agendar <span class="arr" aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" id="quimicas">
+            <!-- FOTO: servico-quimicas (luzes, platinado ou nevou) -->
+            <div class="frame"><img class="bw" src="fotos/serv-quimicas.jpg" alt="Rapaz de óculos escuros com cabelo descolorido no topo" loading="lazy"></div>
+            <div class="card-body">
+              <p class="mono card-top"><span>05</span><span>Luzes · platinado · nevou</span></p>
+              <h3 class="ttl">Químicas</h3>
+              <p class="txt">Luzes, platinado e nevou. Manda o print da referência que a gente vê junto o que dá pra fazer.</p>
+              <div class="card-foot">
+                <!-- PREÇO: preencher (ou "sob consulta") --><p class="mono price"><span class="ph">[R$ —]</span></p>
+                <a class="btn btn--line btn--sm" href="https://wa.me/5547997381078?text=Ol%C3%A1%20Carlos%2C%20quero%20agendar%20uma%20qu%C3%ADmica%20(luzes%2C%20platinado%20ou%20nevou)" target="_blank" rel="noopener">Agendar <span class="arr" aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card card--cta">
+            <div class="card-body">
+              <p class="mono card-top"><span>06</span><span>Outro pedido</span></p>
+              <h3 class="ttl">Tem uma ideia?</h3>
+              <p class="txt">Viu um corte no Insta e quer igual? Manda a foto no WhatsApp e me fala o que você quer.</p>
+              <a class="btn" href="https://wa.me/5547997381078?text=Ol%C3%A1%20Carlos%2C%20vi%20um%20corte%20e%20queria%20saber%20se%20voc%C3%AA%20faz" target="_blank" rel="noopener" style="margin-top:auto">Mandar referência <span class="arr" aria-hidden="true">→</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. A JORNADA -->
+    <section class="sec" id="jornada" aria-labelledby="jornada-title" style="padding-top:0">
+      <div class="wrap">
+        <div class="split">
+          <div class="jornada-txt">
+            <p class="mono eyebrow">A jornada</p>
+            <h2 class="ttl h2" id="jornada-title">Um corte de cada vez</h2>
+            <!-- TEXTO: revisar com o Carlos e completar com a história real dele -->
+            <p class="txt">Desde 2024 eu posto meus cortes no Instagram. Cada vídeo fica lá como registro: dá pra ver o degradê de hoje mais limpo que o de ontem.</p>
+            <p class="txt">Pra mim barbearia é ofício. Treino o olho, a mão e o atendimento, um cliente de cada vez, aqui em Jaraguá do Sul.</p>
+            <p class="txt">Se você quiser fazer parte dessa história, a cadeira tá esperando.</p>
+            <ol class="steps">
+              <li><span class="mono">2024</span><span>Primeiros vídeos de corte no @carlosrosabarber</span></li>
+              <li><span class="mono">Hoje</span><span>Agenda aberta em Jaraguá do Sul/SC, com hora marcada</span></li>
+              <li><span class="mono">Próximo</span><span class="ph">[Próximo passo da jornada, a confirmar]</span></li>
+            </ol>
+          </div>
+          <!-- FOTO: jornada (vertical 4:5, de preferência o Carlos trabalhando de polo preta) -->
+          <div class="frame jornada-img rv"><img class="bw" src="fotos/jornada.jpg" alt="Barbeiro concentrado cortando o cabelo de um cliente" loading="lazy"></div>
+        </div>
+
+        <figure class="quote">
+          <blockquote><p class="ttl">Acompanhe minha jornada <em>neste mundo.</em></p></blockquote>
+          <figcaption class="mono">Carlos Gabriel · bio do @carlosrosabarber</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 7. HORÁRIOS -->
+    <section class="sec" id="horarios" aria-labelledby="horarios-title" style="padding-top:0">
+      <div class="wrap">
+        <div class="sec-head">
+          <div>
+            <p class="mono eyebrow">Horários</p>
+            <h2 class="ttl h2" id="horarios-title">Escolhe o dia</h2>
+          </div>
+          <p class="lead">Você escolhe o dia, eu confirmo o horário no WhatsApp. Vaga por ordem de chegada da mensagem.</p>
+        </div>
+        <!-- HORÁRIOS: todos [PLACEHOLDER]. Trocar pelos dias e faixas reais -->
+        <div class="slots">
+          <div class="slot">
+            <p class="slot-day">Seg<small>Segunda</small></p>
+            <p class="mono slot-time"><span class="ph">[00:00 — 00:00]</span></p>
+            <a class="btn btn--line btn--sm" href="https://wa.me/5547997381078?text=Ol%C3%A1%20Carlos%2C%20quero%20reservar%20um%20hor%C3%A1rio%20na%20segunda" target="_blank" rel="noopener">Reservar</a>
+          </div>
+          <div class="slot">
+            <p class="slot-day">Ter<small>Terça</small></p>
+            <p class="mono slot-time"><span class="ph">[00:00 — 00:00]</span></p>
+            <a class="btn btn--line btn--sm" href="https://wa.me/5547997381078?text=Ol%C3%A1%20Carlos%2C%20quero%20reservar%20um%20hor%C3%A1rio%20na%20ter%C3%A7a" target="_blank" rel="noopener">Reservar</a>
+          </div>
+          <div class="slot">
+            <p class="slot-day">Qua<small>Quarta</small></p>
+            <p class="mono slot-time"><span class="ph">[00:00 — 00:00]</span></p>
+            <a class="btn btn--line btn--sm" href="https://wa.me/5547997381078?text=Ol%C3%A1%20Carlos%2C%20quero%20reservar%20um%20hor%C3%A1rio%20na%20quarta" target="_blank" rel="noopener">Reservar</a>
+          </div>
+          <div class="slot">
+            <p class="slot-day">Qui<small>Quinta</small></p>
+            <p class="mono slot-time"><span class="ph">[00:00 — 00:00]</span></p>
+            <a class="btn btn--line btn--sm" href="https://wa.me/5547997381078?text=Ol%C3%A1%20Carlos%2C%20quero%20reservar%20um%20hor%C3%A1rio%20na%20quinta" target="_blank" rel="noopener">Reservar</a>
+          </div>
+          <div class="slot">
+            <p class="slot-day">Sex<small>Sexta</small></p>
+            <p class="mono slot-time"><span class="ph">[00:00 — 00:00]</span></p>
+            <a class="btn btn--line btn--sm" href="https://wa.me/5547997381078?text=Ol%C3%A1%20Carlos%2C%20quero%20reservar%20um%20hor%C3%A1rio%20na%20sexta" target="_blank" rel="noopener">Reservar</a>
+          </div>
+          <div class="slot">
+            <p class="slot-day">Sáb<small>Sábado</small></p>
+            <p class="mono slot-time"><span class="ph">[00:00 — 00:00]</span></p>
+            <a class="btn btn--line btn--sm" href="https://wa.me/5547997381078?text=Ol%C3%A1%20Carlos%2C%20quero%20reservar%20um%20hor%C3%A1rio%20no%20s%C3%A1bado" target="_blank" rel="noopener">Reservar</a>
+          </div>
+        </div>
+        <p class="mono slots-note">Atendimento só com hora marcada</p>
+      </div>
+    </section>
+
+    <!-- 8. ONDE ESTOU -->
+    <section class="local" id="local" aria-labelledby="local-title">
+      <!-- FOTO: local (fachada ou interior do espaço do Carlos) -->
+      <div class="local-img"><img class="bw" src="fotos/local.jpg" alt="Interior de barbearia com cadeiras de couro e parede de tijolos" loading="lazy"></div>
+      <div class="wrap">
+        <div class="local-card rv">
+          <p class="mono eyebrow">Onde estou</p>
+          <h2 class="ttl h2" id="local-title">Jaraguá do Sul/SC</h2>
+          <dl class="info">
+            <div><dt class="mono">Endereço</dt><dd><span class="ph">[PLACEHOLDER: rua e bairro]</span></dd></div>
+            <div><dt class="mono">Cidade</dt><dd>Jaraguá do Sul/SC</dd></div>
+            <div><dt class="mono">Atendimento</dt><dd>Com hora marcada, pelo WhatsApp</dd></div>
+          </dl>
+          <!-- MAPS: trocar query pelo endereço real quando tiver -->
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Jaragu%C3%A1%20do%20Sul%20SC" target="_blank" rel="noopener">Abrir no Maps <span class="arr" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. MURAL DE TRABALHOS -->
+    <section class="sec" id="trabalhos" aria-labelledby="trabalhos-title">
+      <div class="wrap">
+        <div class="sec-head">
+          <div>
+            <p class="mono eyebrow">work.</p>
+            <h2 class="ttl h2" id="trabalhos-title">Mural de trabalhos</h2>
+          </div>
+          <p class="lead">Degradê, navalha, barba e química. O resto tá nos destaques do Insta.</p>
+        </div>
+        <div class="mural">
+          <!-- FOTO: mural-01 --><div class="frame t-big rv"><img class="bw" src="fotos/mural-1.jpg" alt="Navalha acertando o contorno na nuca" loading="lazy"></div>
+          <!-- FOTO: mural-02 --><div class="frame t-tall rv"><img class="bw" src="fotos/mural-2.jpg" alt="Barbeiro modelando cabelo crespo" loading="lazy"></div>
+          <!-- FOTO: mural-03 --><div class="frame rv"><img class="bw" src="fotos/mural-3.jpg" alt="Máquina finalizando corte curto" loading="lazy"></div>
+          <!-- FOTO: mural-04 --><div class="frame rv"><img class="bw" src="fotos/mural-4.jpg" alt="Mão com máquina sobre o ombro de cliente com capa" loading="lazy"></div>
+          <!-- FOTO: mural-05 --><div class="frame t-wide rv"><img class="bw" src="fotos/mural-5.jpg" alt="Cliente de perfil com degradê terminado" loading="lazy"></div>
+          <!-- FOTO: mural-06 --><div class="frame t-tall rv"><img class="bw" src="fotos/mural-6.jpg" alt="Tesoura desbastando volume com pente" loading="lazy"></div>
+          <!-- FOTO: mural-07 --><div class="frame rv"><img class="bw" src="fotos/mural-7.jpg" alt="Topete penteado depois do corte" loading="lazy"></div>
+          <!-- FOTO: mural-08 --><div class="frame rv"><img class="bw" src="fotos/mural-8.jpg" alt="Máquina descendo o degradê ao lado da barba" loading="lazy"></div>
+          <!-- FOTO: mural-09 --><div class="frame t-big rv"><img class="bw" src="fotos/mural-9.jpg" alt="Acabamento com máquina na lateral" loading="lazy"></div>
+          <!-- FOTO: mural-10 --><div class="frame t-wide rv"><img class="bw" src="fotos/mural-10.jpg" alt="Pente e tesoura no topo do cabelo" loading="lazy"></div>
+          <!-- FOTO: mural-11 --><div class="frame t-wide rv"><img class="bw" src="fotos/mural-11.jpg" alt="Barbeiro de luvas pretas cortando cabelo" loading="lazy"></div>
+          <!-- FOTO: mural-12 --><div class="frame t-wide rv"><img class="bw" src="fotos/mural-12.jpg" alt="Barbeiro trabalhando no corte de um cliente" loading="lazy"></div>
+        </div>
+        <div class="mural-foot">
+          <p class="mono">Destaques: work. · Químicas · polo · rs.</p>
+          <a class="btn btn--line" href="https://www.instagram.com/carlosrosabarber/" target="_blank" rel="noopener">Ver mais no Instagram <span class="arr" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. DEPOIMENTOS: todos [PLACEHOLDER]. Só trocar por falas reais, com autorização do cliente -->
+    <section class="sec" id="depoimentos" aria-labelledby="depo-title" style="padding-top:0">
+      <div class="wrap">
+        <div class="sec-head">
+          <div>
+            <p class="mono eyebrow">Na cadeira</p>
+            <h2 class="ttl h2" id="depo-title">O que os clientes dizem</h2>
+          </div>
+        </div>
+        <div class="quotes">
+          <figure class="tcard">
+            <p class="mark" aria-hidden="true">“</p>
+            <blockquote><span class="ph">[PLACEHOLDER: depoimento real de cliente]</span></blockquote>
+            <figcaption class="mono"><span class="ph">[Nome do cliente]</span></figcaption>
+          </figure>
+          <figure class="tcard">
+            <p class="mark" aria-hidden="true">“</p>
+            <blockquote><span class="ph">[PLACEHOLDER: depoimento real de cliente]</span></blockquote>
+            <figcaption class="mono"><span class="ph">[Nome do cliente]</span></figcaption>
+          </figure>
+          <figure class="tcard">
+            <p class="mark" aria-hidden="true">“</p>
+            <blockquote><span class="ph">[PLACEHOLDER: depoimento real de cliente]</span></blockquote>
+            <figcaption class="mono"><span class="ph">[Nome do cliente]</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. CTA FINAL -->
+    <section class="final" aria-labelledby="final-title">
+      <!-- FOTO: cta-final (horizontal, escura) -->
+      <div class="final-img"><img class="bw" src="fotos/cta.jpg" alt="Cadeira de barbeiro vazia em ambiente escuro" loading="lazy"></div>
+      <div class="wrap">
+        <p class="mono eyebrow">Agenda aberta · Jaraguá do Sul/SC</p>
+        <h2 class="ttl" id="final-title">Bora marcar?</h2>
+        <p class="txt">Manda um oi no WhatsApp, escolhe o horário e chega na hora. O resto é comigo.</p>
+        <a class="btn btn--xl" href="https://wa.me/5547997381078?text=Ol%C3%A1%20Carlos%2C%20bora%20marcar%3F%20Quero%20agendar%20um%20hor%C3%A1rio" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.47-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.78h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.69 1.45h.01c6.55 0 11.89-5.34 11.89-11.89a11.82 11.82 0 0 0-3.48-8.41"/></svg>
+          Chamar no WhatsApp
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- 12. RODAPÉ -->
+  <footer class="ftr">
+    <div class="wrap">
+      <div class="ftr-grid">
+        <div class="ftr-brand"><a class="logo" href="#topo" aria-label="Voltar ao topo">C.R</a></div>
+        <div>
+          <h3 class="mono">Instagram</h3>
+          <a class="ftr-link" href="https://www.instagram.com/carlosrosabarber/" target="_blank" rel="noopener">@carlosrosabarber</a>
+        </div>
+        <div>
+          <h3 class="mono">WhatsApp</h3>
+          <a class="ftr-link" href="https://wa.me/5547997381078" target="_blank" rel="noopener">(47) 99738-1078</a>
+        </div>
+        <div>
+          <h3 class="mono">Cidade</h3>
+          <p class="city">Jaraguá do Sul/SC</p>
+        </div>
+      </div>
+      <div class="ftr-bottom mono">
+        <p>© Carlos Gabriel Barber</p>
+        <!-- CRÉDITO: remover quando as fotos do Unsplash forem trocadas pelas do Carlos -->
+        <p>Fotos provisórias: Unsplash</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLUTUANTE (só no celular) -->
+  <a class="fab" href="https://wa.me/5547997381078?text=Ol%C3%A1%20Carlos%2C%20quero%20agendar%20um%20hor%C3%A1rio" target="_blank" rel="noopener" aria-label="Agendar pelo WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.47-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.78h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.69 1.45h.01c6.55 0 11.89-5.34 11.89-11.89a11.82 11.82 0 0 0-3.48-8.41"/></svg>
+  </a>
+
+  <!-- GRÃO (efeito de filme sobre a página) -->
+  
+    <svg class="grain" aria-hidden="true" focusable="false"><filter id="grao"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="3" stitchTiles="stitch"></feTurbulence><feColorMatrix type="saturate" values="0"></feColorMatrix></filter><rect width="100%" height="100%" filter="url(#grao)"></rect></svg>
+  
+</div>
+
+<script>
+(function(){
+  var b=document.querySelector('.burger'), m=document.getElementById('menu-mobile');
+  function set(open){ m.hidden=!open; b.classList.toggle('is-open',open); b.setAttribute('aria-expanded',String(open)); b.setAttribute('aria-label',open?'Fechar menu':'Abrir menu'); document.documentElement.style.overflow=open?'hidden':''; }
+  b.addEventListener('click',function(){ set(m.hidden); });
+  m.addEventListener('click',function(e){ if(e.target.closest('a')) set(false); });
+  document.querySelector('.logo').addEventListener('click',function(){ set(false); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape' && !m.hidden){ set(false); b.focus(); } });
+  window.matchMedia('(min-width: 961px)').addEventListener('change',function(e){ if(e.matches) set(false); });
+})();
+</script>
+</body>
+</html>
